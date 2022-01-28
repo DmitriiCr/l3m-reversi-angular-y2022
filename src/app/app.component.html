@@ -1,0 +1,12 @@
+
+<p> {{RGS.turn}} : {{searchplayers(RGS.turn)}}</p>
+<p> {{RGS.turn == 'Player1' ? "Player2" : "Player1"}} : {{ searchplayers(RGS.turn == 'Player1' ? "Player2" : "Player1")}} </p> <!-- choisi le joueur a qui c'est le deuxieme tour -->
+<table border="1"  >
+<tr *ngFor = "let i of RGS.board"> <!-- Ajouter un indice i ici, voir le cours, transparent 16 -->
+
+  <td *ngFor = "let j of i"> <!-- Ajouter un indice j ici -->
+      <p> {{cToString(j)}} </p>
+
+  </td>
+</tr>
+</table>
